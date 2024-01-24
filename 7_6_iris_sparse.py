@@ -17,7 +17,7 @@ def read_iris():
     exit()
 
     return x, y
-
+#
 x, y = read_iris()
 print(x.shape, y.shape)
 
