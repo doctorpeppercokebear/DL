@@ -10,10 +10,12 @@ mnist = keras.datasets.mnist.load_data()
 x_train = x_train.reshape(-1, 784)
 x_test = x_test.reshape(-1, 784)
 
+# 정규화
 x_train = x_train / 255
 
 x_test = x_test / 255
 
+#
 model = keras.Sequential([
         keras.layers.Dense(10, activation='softmax'),
     ])
