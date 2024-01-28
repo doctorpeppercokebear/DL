@@ -2,7 +2,8 @@ import pandas as pd
 import numpy as np
 import tensorflow.keras as keras
 from sklearn import model_selection, preprocessing
-
+from tensorflow.python.client import device_lib
+print(device_lib.list_local_devices())
 
 def read_adult():
     adult = pd.read_csv('data/adult.data', header=None)
@@ -19,7 +20,7 @@ def read_adult():
 
     bin = preprocessing.LabelBinarizer()
     y = bin.fit_transform(adult[14])
-    print(y)
+    # print(y)
 
     work = bin.fit_transform(adult[1])
     edu = bin.fit_transform(adult[3])
@@ -29,11 +30,11 @@ def read_adult():
     race = bin.fit_transform(adult[8])
     sex = bin.fit_transform(adult[9])
     country = bin.fit_transform(adult[13])
-    print(work)
-    print(work.shape)
+    # print(work)
+    # print(work.shape)
 
     x = np.hstack([x, work, edu, marital, occu, rel, race, sex, country])
-    print(x.shape)
+    # print(x.shape)
     return x, y
 
 

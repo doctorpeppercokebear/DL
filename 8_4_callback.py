@@ -3,6 +3,7 @@
 import tensorflow.keras as keras
 from sklearn import preprocessing, model_selection
 import matplotlib.pyplot as plt
+from tensorflow.python.client import device_lib
 
 mnist = keras.datasets.mnist.load_data()
 (x_train, y_train), (x_test, y_test) = mnist
