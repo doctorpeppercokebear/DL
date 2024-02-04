@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a131319-7f8a-469c-a34c-09ed4b545052" name="Changes" comment="0115 euducation">
-      <change afterPath="$PROJECT_DIR$/nvidia DLi/MNIST_DLI.py" afterDir="false" />
+    <list default="true" id="8a131319-7f8a-469c-a34c-09ed4b545052" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/pythonProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pythonProject.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/8_4_callback.py" beforeDir="false" afterPath="$PROJECT_DIR$/8_4_callback.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/8_5_adult.py" beforeDir="false" afterPath="$PROJECT_DIR$/8_5_adult.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nvidia DLi/01_mnist.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/nvidia DLi/01_mnist.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytoch/01_Vanilla_GAN.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/pytoch/01_Vanilla_GAN.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +75,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "settings.editor.selected.configurable": "editor.preferences.pyOptions",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -153,6 +150,9 @@
       <module name="pythonProject" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -172,6 +172,9 @@
       <module name="pythonProject" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/nvidia DLi" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -257,7 +260,8 @@
       <option name="presentableId" value="Default" />
       <updated>1704847950757</updated>
       <workItem from="1706416385445" duration="2317000" />
-      <workItem from="1706424826716" duration="7795000" />
+      <workItem from="1706424826716" duration="7882000" />
+      <workItem from="1707034083336" duration="5139000" />
     </task>
     <task id="LOCAL-00001" summary="0110 euducation">
       <option name="closed" value="true" />
@@ -291,7 +295,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705308365149</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="0128">
+      <option name="closed" value="true" />
+      <created>1706453014472</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1706453014472</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -313,7 +325,8 @@
     <MESSAGE value="0111 euducation" />
     <MESSAGE value="0112 euducation" />
     <MESSAGE value="0115 euducation" />
-    <option name="LAST_COMMIT_MESSAGE" value="0115 euducation" />
+    <MESSAGE value="0128" />
+    <option name="LAST_COMMIT_MESSAGE" value="0128" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/DL$4_5_movie.coverage" NAME="4_5_movie Coverage Results" MODIFIED="1706421441188" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
