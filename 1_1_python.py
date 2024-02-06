@@ -74,6 +74,7 @@ print()
 # *****  (0, 5, 1)
 # 출력  0, 4 는 출력
 
+
 for i in range(5):
     for k in range(5):
         # if i % 4 == 0 or k % 4 == 0:
