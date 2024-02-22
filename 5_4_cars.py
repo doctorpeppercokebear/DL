@@ -11,6 +11,7 @@ def read_cars():
     # print(cars)
     # print(cars.values)
 
+
     x = cars.speed.values.reshape(-1, 1)  # 시리즈
     y = cars['dist'].values.reshape(-1, 1)
     # print(x.shape, y.shape)
