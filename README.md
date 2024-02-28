@@ -2,9 +2,10 @@
  
 version  
 python == 3.9.0  
-numpy == 1.22.4  
 matplolib == 3.3.0  
-tendorflow == 2.5.0  
+Keras 버전: 2.15.0
+tensorflow 버전: 2.15.0
+NumPy 버전: 1.25.2
 cuda  
 pytorch cuda  
 seeborn == 0.11.1  
