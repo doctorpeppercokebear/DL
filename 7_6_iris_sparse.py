@@ -1,7 +1,7 @@
 # 퀴즈
 # iris sparse sparkling color scheme
 import pandas as pd
-import tensorflow.keras as keras
+import keras
 import numpy as np
 from sklearn import preprocessing  # 올바른 모듈명 사용
 
