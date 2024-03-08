@@ -26,6 +26,7 @@ def make_xy():
 
     bank.info()
 
+    # 문자열 데이터를 원 핫 백터로 바꾸는 작업
     marital = bin.fit_transform(bank.marital)
     education = bin.fit_transform(bank.education)
     housing = bin.fit_transform(bank.housing)
