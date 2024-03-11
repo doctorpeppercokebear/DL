@@ -1,7 +1,10 @@
 # 3_4_frozen_lake.py
 import gym          # 0.17.3
 
-
+'''
+https://blog.jiniworld.me/30
+참고해서 ANSI Color 환경 수정
+'''
 def gym_basic():
     env = gym.make('FrozenLake-v0')
 
