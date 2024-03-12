@@ -37,17 +37,18 @@ def tf_model():
     z1 = tf.matmul(x, w1) + b1
     r1 = tf.nn.relu(z1)
     # (?, 3) = (?, 12) @ (12, 3)
-    z2 = tf.matmul(r1, w2) + b2
-    hx = tf.nn.softmax(z2)
+    hx = tf.matmul(r1, w2) + b2
+    # z2 = tf.matmul(r1, w2) + b2
+    # hx = tf.nn.softmax(z2)
 
     # loss = tf.reduce_mean(-tf.reduce_sum(y * tf.log(hx)))           # categorical cross entropy
-    loss = tf.reduce_mean(-tf.reduce_sum(y * tf.log(hx)))           # categorical cross entropy
-    train = tf.train.GradientDescentOptimizer(0.1).minimize(loss)   # SGD
+    loss = tf.nn.softmax_cross_entropy_with_logits(logits=hx, labels=y)
+    train = tf.train.GradientDescentOptimizer(0.001).minimize(loss)   # SGD
 
     sess = tf.Session()
     sess.run(tf.global_variables_initializer())
 
-    for i in range(100):
+    for i in range(1000):
         sess.run(train, {x: x_train, y: y_train})
 
         p = sess.run(hx, {x: x_test})
@@ -55,7 +56,8 @@ def tf_model():
         p_arg = np.argmax(p, axis=1)
         y_arg = np.argmax(y_test, axis=1)
 
-        print('acc :', np.mean(p_arg == y_arg))
+        if i % 10 == 0:
+            print(i, ':', np.mean(p_arg == y_arg))
 
     sess.close()
 
