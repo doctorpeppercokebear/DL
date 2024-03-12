@@ -25,29 +25,28 @@ class Bandit:
 class Gamer:
     def __init__(self, bandits, is_greedy, e):
         self.is_greedy = is_greedy
-        self.means = [b.mean for b in bandits]
         self.e = e
         self.bandits = bandits
 
     def e_greedy(self):
         if np.random.rand() < self.e:
-            return np.random.choice(len(self.means))
+            return np.random.choice(len(self.bandits))
 
-        return np.argmax(self.means)
+        return np.argmax([b.mean for b in self.bandits])
 
     def greedy(self):
-        return np.argmax(self.means)
+        return np.argmax([b.mean for b in self.bandits])
 
     def show(self, N):
         for _ in range(N):
             select = self.greedy() if self.is_greedy else self.e_greedy()
 
-            reward = bandits[select].pull()
-            bandits[select].update(reward)
+            reward = self.bandits[select].pull()
+            self.bandits[select].update(reward)
 
         print('value :', [b.reward for b in self.bandits])
         print('mean  :', [b.mean for b in self.bandits])
-        print('argmax:', np.argmax([b.mean for b in bandits]))
+        print('argmax:', np.argmax([b.mean for b in self.bandits]))
 
 
 bandits = [Bandit(1.0), Bandit(-2.0), Bandit(3.0)]

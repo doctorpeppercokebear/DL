@@ -1,8 +1,15 @@
+# 3_3_mab_final.py
+import numpy as np
+import matplotlib.pyplot as plt
+
+
 '''
-퀴즈
-숫자 리스트에 대해 누적 합계를 구하세요
+ 퀴즈
+ 숫자 리스트에 대해 누적 합계를 구하세요
+ 1  3 10 14 19
 '''
-import  numpy as np
+
+
 
 def show_cumulated():
     a = [1, 2, 7, 4, 5]
@@ -46,18 +53,17 @@ class Bandit:
 class Gamer:
     def __init__(self, bandits, is_greedy, e):
         self.is_greedy = is_greedy
-        self.means = [b.mean for b in bandits]
         self.e = e
         self.bandits = bandits
 
     def e_greedy(self):
         if np.random.rand() < self.e:
-            return np.random.choice(len(self.means))
+            return np.random.choice(len(self.bandits))
 
-        return np.argmax(self.means)
+        return np.argmax([b.mean for b in self.bandits])
 
     def greedy(self):
-        return np.argmax(self.means)
+        return np.argmax([b.mean for b in self.bandits])
 
     def show(self, N):
         rewards = []
@@ -75,7 +81,7 @@ class Gamer:
 
         # 퀴즈
         # 모든 슬롯머신에서 나온 결과를 누적합계를 사용한 그래프를 그리세요
-        avg = np.cumsum(rewards) / np.arange(1, N)
+        avg = np.cumsum(rewards) / np.arange(1, N + 1)
         plt.plot(avg, 'r')
         plt.xscale('log')
         plt.show()
@@ -90,3 +96,4 @@ def mab_final():
 
 # show_cumulated()
 mab_final()
+
